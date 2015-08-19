@@ -11,6 +11,7 @@ import org.junit.Test;
 
 import redis.clients.jedis.Jedis;
 
+import com.google.common.io.Files;
 import com.zzy.tool.redis.JedisUtil;
 import com.zzy.tool.util.SerializeUtil;
 import com.zzy.tool.util.TranslateBean;
@@ -45,11 +46,8 @@ public class WriteToRedis {
 
 	public static void openTread(String fileName) {
 		System.out.println(fileName);
-		try {
-			executor.execute(new WriteToRedis().new QueueThread(fileName));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		
+		MQProduct(fileName);
 	}
 
 	// 通过线程获取queue数据
@@ -95,6 +93,7 @@ public class WriteToRedis {
 					///if(!jedis.exists(Strings[0] + Strings[1])){
 					jedis.set(Strings[0] + Strings[1], SerializeUtil.jsonSerialize(translateBean));
 					//}
+					
 					}catch(Exception e){
 						e.printStackTrace();
 					}
@@ -104,6 +103,16 @@ public class WriteToRedis {
 			in.close();
 			reader.close();
 			// 将读取后的文件进行迁移
+			
+			File file = new File(fileName);
+			String parentPath = file.getParent();
+			String backPath = parentPath + File.separator + "back";
+			File backFile = new File(backPath);
+			if (!backFile.exists()) {
+				backFile.mkdirs();
+			}
+			File renameFile = new File(backPath + File.separator + file.getName());
+			Files.move(file, renameFile);
 
 		} catch (IOException e) {
 			e.printStackTrace();
