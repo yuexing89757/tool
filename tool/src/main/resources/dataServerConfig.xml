@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server>
+	<dataServer>
+		<serverName>YOUDAO</serverName>
+		<analyzeType>Jsoup</analyzeType>
+		<timeout>30000</timeout>
+		<urlFont>http://dict.youdao.com/search?q=lj:</urlFont>
+		<urlEnd>&amp;ljtype=blng&amp;ljblngcont=0&amp;keyfrom=dict.main.moreblng&amp;le=</urlEnd>
+		<baseDom>#bilingual</baseDom>
+		<dataDom>.ol > li</dataDom>
+	</dataServer>
+
+	<dataServer>
+		<serverName>BAIDU</serverName>
+		<analyzeType>httpUnit</analyzeType>
+		<timeout>30000</timeout>
+		<urlFont>http://dict.baidu.com/s?wd=</urlFont>
+		<urlEnd></urlEnd>
+		<baseDom>#example-content</baseDom>
+		<dataDom>ol > li</dataDom>
+	</dataServer>
+	
+	<dataServer>
+		<serverName>BING</serverName>
+		<analyzeType>Jsoup</analyzeType>
+		<timeout>30000</timeout>
+		<urlFont>http://cn.bing.com/dict/search?q=</urlFont>
+		<urlEnd></urlEnd>
+		<baseDom>#sentenceSeg</baseDom>
+		<dataDom>.se_li > .se_li1</dataDom>
+	</dataServer>
+
+	<dataServer>
+		<serverName>HUJIANG</serverName>
+		<analyzeType>Jsoup</analyzeType>
+		<timeout>30000</timeout>
+		<urlFont>http://dict.hjenglish.com/w/</urlFont>
+		<urlEnd></urlEnd>
+		<baseDom>#referSentence</baseDom>
+		<dataDom>ol > li</dataDom>
+	</dataServer>
+	
+	
+	<dataServer>
+		<serverName>SENTBASE</serverName>
+		<analyzeType>Jsoup</analyzeType>
+		<timeout>30000</timeout>
+		<urlFont>http://www.sentbase.com/bisnt/index.php?q=</urlFont>
+		<urlEnd></urlEnd>
+		<baseDom>.xml</baseDom>
+		<dataDom>ul > li</dataDom>
+	</dataServer>
+	
+
+	<dataServer>
+		<serverName>MYMEMORY</serverName>
+		<analyzeType>Jsoup</analyzeType>
+		<timeout>30000</timeout>
+		<urlFont>http://mymemory.translated.net/zh/</urlFont>
+		<urlEnd></urlEnd>
+		<baseDom>#resall</baseDom>
+		<dataDom>.res_row</dataDom>
+	</dataServer>
+
+
+</server>

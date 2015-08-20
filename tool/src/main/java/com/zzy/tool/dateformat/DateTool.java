@@ -6,7 +6,6 @@ import java.util.Date;
 public class DateTool {
 
 	public static void main(String[] args) {
-		
 		/*
          * 以下代码用于向大家展示各个时间日期类对象的包含组件。
          */
@@ -31,8 +30,6 @@ public class DateTool {
         System.out.println(simpleDateFormat.format(sqlDate)); // 输出：2012-09-01 13:20:41 
         System.out.println(simpleDateFormat.format(utilDate)); // 输出：2012-09-01 13:20:41
         System.out.println(simpleDateFormat.format(cl.getTime())); // 输出：2012-09-01 13:20:41
-        
-        
         
         
         //字符串转日期     //Date或者String转化为时间戳  

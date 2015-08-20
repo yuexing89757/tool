@@ -82,8 +82,8 @@ public class JedisDemo {
         System.out.println("打印数组..."+jedis.lrange("lists", 0, 3));  
    }
     
-   
-   private void setOperate() { 
+   @Test
+   public void setOperate() { 
 	   Jedis  jedis =JedisUtil.getInstance().getJedis("172.16.1.210",6379);
        System.out.println("======================set=========================="); 
        // 清空数据 
