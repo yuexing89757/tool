@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue>
+	<task id="zh_en">
+		<function>true</function>
+		<wordQueue>zhEnWordQueue_tcp://172.16.6.87:61616?trace=true</wordQueue>
+		<resultQueue>ResultQueue_tcp://172.16.6.87:61616?trace=true</resultQueue>
+		<wordNullQueue>zhEnWordNullQueue_tcp://172.16.6.87:61616?trace=true</wordNullQueue>
+		<redisIpPort>172.16.6.87_6379</redisIpPort>
+		<converLNG>zh_en</converLNG>
+		<servers>
+			<server>
+				<serverName>YOUDAO</serverName>
+				<theadNum>1</theadNum>
+				<enable>false</enable>
+			</server>
+
+			<server>
+				<serverName>SENTBASE</serverName>
+				<theadNum>2</theadNum>
+				<enable>true</enable>
+			</server>
+			
+			<server>
+				<serverName>BAIDU</serverName>
+				<theadNum>1</theadNum>
+				<enable>true</enable>
+			</server>
+			
+			<server>
+				<serverName>BING</serverName>
+				<theadNum>1</theadNum>
+				<enable>true</enable>
+			</server>
+			
+			<server>
+				<serverName>HUJIANG</serverName>
+				<theadNum>1</theadNum>
+				<enable>true</enable>
+			</server>
+			
+			<server>
+				<serverName>MYMEMORY</serverName>
+				<theadNum>1</theadNum>
+				<enable>false</enable>
+			</server>
+	
+		</servers>
+	</task>
+
+	
+	<task id="zh_ara">
+		<function>true</function>
+		<wordQueue>zhAraWordQueue_tcp://172.16.6.87:61616?trace=true</wordQueue>
+		<resultQueue>ResultQueue_tcp://172.16.6.87:61616?trace=true</resultQueue>
+		<wordNullQueue>zhAraWordNullQueue_tcp://172.16.6.87:61616?trace=true</wordNullQueue>
+		<redisIpPort>172.16.6.87_6379</redisIpPort>
+		<converLNG>zh_ara</converLNG>
+		<servers>
+		
+			<server>
+				<serverName>MYMEMORY</serverName>
+				<theadNum>3</theadNum>
+				<enable>true</enable>
+			</server>
+			
+			
+
+		</servers>
+	</task>
+	
+	
+	<task id="zh_jp">
+		<function>true</function>
+		<wordQueue>zhJpWordQueue_tcp://172.16.6.87:61616?trace=true</wordQueue>
+		<resultQueue>ResultQueue_tcp://172.16.6.87:61616?trace=true</resultQueue>
+		<wordNullQueue>zhJpWordNullQueue_tcp://172.16.6.87:61616?trace=true</wordNullQueue>
+		<redisIpPort>172.16.6.87_6379</redisIpPort>
+		<converLNG>zh_jp</converLNG>
+		<servers>
+		
+			<server>
+				<serverName>MYMEMORY</serverName>
+				<theadNum>1</theadNum>
+				<enable>true</enable>
+			</server>
+			
+			<server>
+				<serverName>YOUDAO</serverName>
+				<theadNum>2</theadNum>
+				<enable>true</enable>
+			</server>
+
+		</servers>
+	</task>
+	
+	<task id="zh_kor">
+		<function>true</function>
+		<wordQueue>zhKorWordQueue_tcp://172.16.6.87:61616?trace=true</wordQueue>
+		<resultQueue>ResultQueue_tcp://172.16.6.87:61616?trace=true</resultQueue>
+		<wordNullQueue>zhKorWordNullQueue_tcp://172.16.6.87:61616?trace=true</wordNullQueue>
+		<redisIpPort>172.16.6.87_6379</redisIpPort>
+		<converLNG>zh_kor</converLNG>
+		<servers>
+		
+			<server>
+				<serverName>MYMEMORY</serverName>
+				<theadNum>1</theadNum>
+				<enable>true</enable>
+			</server>
+			
+			<server>
+				<serverName>YOUDAO</serverName>
+				<theadNum>2</theadNum>
+				<enable>true</enable>
+			</server>
+
+		</servers>
+	</task>
+	
+	
+	<task id="zh_fra">
+		<function>true</function>
+		<wordQueue>zhFraWordQueue_tcp://172.16.6.87:61616?trace=true</wordQueue>
+		<resultQueue>ResultQueue_tcp://172.16.6.87:61616?trace=true</resultQueue>
+		<wordNullQueue>zhFraWordNullQueue_tcp://172.16.6.87:61616?trace=true</wordNullQueue>
+		<redisIpPort>172.16.6.87_6379</redisIpPort>
+		<converLNG>zh_fra</converLNG>
+		<servers>
+		
+			<server>
+				<serverName>MYMEMORY</serverName>
+				<theadNum>1</theadNum>
+				<enable>true</enable>
+			</server>
+			
+			<server>
+				<serverName>YOUDAO</serverName>
+				<theadNum>2</theadNum>
+				<enable>true</enable>
+			</server>
+
+		</servers>
+	</task>
+	
+
+
+</Queue>
